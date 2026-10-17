@@ -1,0 +1,16 @@
+# Environment
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Dataset (downloaded automatically by torchvision)
+data/
+
+# Trained models (large). Remove this line for the small ones the demo needs, or use Git LFS.
+models/*
+!models/.gitkeep
+
+# Editor / tools
+.vscode/
+

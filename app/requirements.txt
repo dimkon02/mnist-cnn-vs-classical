@@ -1,0 +1,8 @@
+# Dependencies for the hosted demo only (Hugging Face Spaces).
+# CPU-only torch is enough for inference and keeps the Space small.
+torch
+torchvision
+scikit-learn
+numpy
+pillow
+gradio
