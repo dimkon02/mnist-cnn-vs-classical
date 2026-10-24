@@ -1,0 +1,6 @@
+model,test_acc,val_acc,train_time_s,train_device,predict_time_s,ms_per_image,size_mb
+cnn,0.9884,0.9888,50.14,cuda,0.195,0.0195,0.83
+svm,0.9859,0.985,9.74,cpu,4.362,0.4362,5.04
+knn,0.975,0.9772,0.48,cpu,0.22,0.022,11.6
+random_forest,0.965,0.9674,10.47,cpu,0.088,0.0088,67.24
+logreg,0.926,0.917,5.02,cpu,0.02,0.002,0.05
