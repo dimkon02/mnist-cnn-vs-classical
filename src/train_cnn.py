@@ -18,6 +18,7 @@ import torch.nn as nn
 import torch.optim as optim
 from src.data import get_dataloaders, SEED
 from src.models.cnn import cnn, cnn_bn_dropout
+from src.reports import save_train_time
 
 
 MODELS = {
@@ -136,6 +137,7 @@ def main():
 
     MODELS_DIR.mkdir(exist_ok=True)
     torch.save(best_state, MODELS_DIR / f"{args.model}.pt")
+    save_train_time(args.model, train_time, val_acc, device=str(device))
     plot_history(history, args.model, FIGURES_DIR / f"{args.model}_training.png")
 
 

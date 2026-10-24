@@ -14,6 +14,9 @@ from sklearn.metrics import accuracy_score
 from src.data import get_numpy_data
 from src.models.classical import logistic_regression, knn, random_forest, svm
 
+from src.reports import save_train_time
+
+
 
 MODELS = {
     "logreg": logistic_regression,
@@ -47,6 +50,8 @@ def main():
               f"predict {pred_time * 1000:.1f} ms ({pred_time / len(X_val) * 1000:.4f} ms/image)")
 
         joblib.dump(model, MODELS_DIR / f"{name}.joblib")
+        save_train_time(name, train_time, val_acc)
+
 
 
 

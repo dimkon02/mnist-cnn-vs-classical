@@ -1,0 +1,6 @@
+model,train_time_s,val_acc,device
+logreg,5.02,0.917,cpu
+knn,0.48,0.9772,cpu
+random_forest,10.47,0.9674,cpu
+svm,9.74,0.985,cpu
+cnn,50.14,0.9888,cuda
